@@ -1,0 +1,37 @@
+
+<script>
+	// https://simpleprogrammer.com/programming-interview-questions/
+	// How do you find the missing number in a given integer array of 1 to 100?
+
+	//Calling function to find_number
+	var result = find_num([1, 2, 3], 2);
+	// Outputting it to standard output
+	document.write(result);
+	// Function that finds the number given in the array
+	function find_num(array, num) {
+		// Declare variables
+		var i = 0;
+		var length = array.length;
+		var found = false;
+		var ret = null;
+		// Loop until number was found or reached the end of the list
+		while(i<length && !found) {
+			// Check if the number was found
+			
+			if(num == array[i]){
+				// Found the number so set flag to exit loop
+				found = true;
+			}
+			else {
+				// Did not find number so increment counter-increment
+				i++;
+			}
+		}
+		// Check if number was found
+		if(found){
+			// Return the index it was found at
+			ret = i;
+		}
+		return ret;
+	}
+</script>
