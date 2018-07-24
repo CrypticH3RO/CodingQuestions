@@ -1,2 +1,2 @@
 # CodingQuestions
-Post my solutions here to coding questions
+Posting my solutions to coding questions in this repository
