@@ -1,0 +1,25 @@
+# https://simpleprogrammer.com/programming-interview-questions/
+# How do you find the missing number in a given integer array of 1 to 100?
+
+def find_num(array, num):
+    '''
+    (list, int) -> int
+    Returns the index of the first occurence in the array of the given number. Returns NONE if nothing is in the array
+    '''
+    # Loop until reached end of the list or found number
+    found = False
+    i = 0
+    ret = None
+    while(i<len(array) and not found):
+        # Check if this index is the number we're looking for
+        if(array[i] == num):
+            # Found the number, set flag
+            found = True
+        else:
+            # Did not find number so increment counter
+            i += 1
+    # Check if the number was found
+    if(found):
+        # Number was found so store index of where it was found
+        ret = i
+    return ret
